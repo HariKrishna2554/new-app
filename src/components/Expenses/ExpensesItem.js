@@ -1,8 +1,11 @@
 import ExpensesDate from './ExpensesDate';
-import Cards from './Cards';
+import Cards from "../UI/Cards";
 import './ExpenseItem.css';
 
 function ExpensesItem(props) {
+    const buttonHandler = () => {
+        alert("Items Details are Saved!");
+    };
     return (
         <Cards className='expense-item'>
             <ExpensesDate date={props.date}/>
@@ -10,6 +13,7 @@ function ExpensesItem(props) {
                 <h2>{props.title}</h2>
                 <Cards className='expense-item__price'>${props.price}</Cards>
             </div>
+            <button onClick={buttonHandler}>Save items</button>
         </Cards>
     );
 }
