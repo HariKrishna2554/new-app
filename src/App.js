@@ -1,5 +1,6 @@
 import Cards from "./components/UI/Cards";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpenses from "./components/NewExpenses/NewExpenses";
 
 function App() {
   const expense = [
@@ -11,6 +12,7 @@ function App() {
   return (
     <Cards>
       <h1>Let's Start Now</h1>
+      <NewExpenses />
       <Expenses items={expense}/>
     </Cards>
   );
