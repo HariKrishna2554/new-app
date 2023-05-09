@@ -26,21 +26,24 @@ function ExpenseForm() {
         }
 
         console.log(expenseData)
+        setEnteredTitle("");
+        setEnteredAmount("");
+        setEnteredDate("");
     }
 
     return <form onSubmit={submitHandler}>
       <div className="new-expense_controls">
         <div className="new-expense_control">
             <label>Title</label>
-            <input type="text" onChange={titleChangeHandler} />
+            <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
         </div>
         <div className="new-expense_control">
             <label>Amount</label>
-            <input type="number" min="0.01" step="0.01" onChange={amountChangeHandler} />
+            <input type="number" value={enteredAmount}  min="0.01" step="0.01" onChange={amountChangeHandler} />
         </div>
         <div className="new-expense_control">
             <label>Date</label>
-            <input type="date" min="2023-05-01" max="2024-01-01" onChange={dateChangeHandler} />
+            <input type="date" value={new Date(enteredDate)}  min="2023-05-01" max="2024-01-01" onChange={dateChangeHandler} />
         </div>
       </div>
       <div className="new-expense_actions">
