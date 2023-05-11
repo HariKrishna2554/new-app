@@ -3,6 +3,7 @@ import "./Expense.css";
 import Cards from "../UI/Cards";
 
 function Expenses(props) {
+    
     return(
         <Cards className="expenses">
             <ExpensesItem
