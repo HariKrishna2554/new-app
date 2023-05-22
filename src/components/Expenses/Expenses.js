@@ -1,4 +1,5 @@
 import ExpensesItem from "./ExpensesItem";
+import React from "react";
 import "./Expense.css";
 import Cards from "../UI/Cards";
 
@@ -23,6 +24,6 @@ function Expenses(props) {
             />
         </Cards>
     );
-}
+};
 
 export default Expenses;

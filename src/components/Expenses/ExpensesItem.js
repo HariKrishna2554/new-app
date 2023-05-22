@@ -4,7 +4,8 @@ import Cards from "../UI/Cards";
 import './ExpenseItem.css';
 
 function ExpensesItem(props) {
-    const [title, setTitle] = useState(props.title)
+    const [title, setTitle] = useState(props.title);
+    console.log('ExpenseItem evaluated by React');
 
     const buttonHandler = () => {
         setTitle("Saved!");
@@ -20,6 +21,6 @@ function ExpensesItem(props) {
             <button onClick={buttonHandler}>Save items</button>
         </Cards>
     );
-}
+};
 
 export default ExpensesItem;
